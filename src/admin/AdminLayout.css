@@ -1,0 +1,13 @@
+.admin-container {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 30px;
+  padding-top: 80px;
+}
+
+@media (max-width:768px) {
+  .admin-container {
+    padding: 20px;
+    padding-top: 80px;
+  }
+}

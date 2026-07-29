@@ -1,0 +1,94 @@
+/* ===========================
+   Skill Table
+=========================== */
+
+.skill-table {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 30px;
+}
+
+.skill-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.skill-table thead {
+   background: #0f2a64;
+    color: white;
+    padding: 14px;
+    text-align: center;
+    border: 1px solid #101012;
+    font-size: 16px;
+}
+
+.skill-table thead th {
+  color: #fff;
+  padding: 16px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.skill-table tbody td {
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.skill-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.skill-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  background: #22c55e;
+  margin-right: 10px;
+}
+
+.edit-btn:hover {
+  background: #16a34a;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 768px) {
+
+  .skill-table table {
+    min-width: 600px;
+  }
+
+}

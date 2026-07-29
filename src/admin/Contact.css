@@ -1,0 +1,68 @@
+.contact-admin {
+    padding: 20px;
+}
+
+.contact-admin h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 5px 12px rgba(0,0,0,.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contact-table th,
+.contact-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.contact-table th {
+    background: #2563eb;
+    color: white;
+}
+
+.contact-table tr:hover {
+    background: #f5f5f5;
+}
+
+.delete-btn {
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #b30024;
+}
+
+@media(max-width:768px){
+
+.contact-table th,
+.contact-table td{
+
+font-size:14px;
+padding:10px;
+
+}
+
+.delete-btn{
+
+padding:6px 10px;
+
+}
+
+}
