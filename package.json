@@ -2,7 +2,7 @@
   "name": "portfolio-react",
   "private": true,
   "version": "0.0.0",
-  "proxy":"https://react-portfolio-24zb.onrender.com/"
+  "proxy":"https://react-portfolio-24zb.onrender.com/",
   "type": "module",
   "scripts": {
     "dev": "vite",
