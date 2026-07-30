@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "DISABLE_ESLINT_PLUGIN=true CI=false react-scripts build",
+    "build": "vite build",
+    
     "lint": "eslint .",
     "preview": "vite preview"
   },
