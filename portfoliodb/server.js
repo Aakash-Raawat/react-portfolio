@@ -5,9 +5,9 @@ const { MongoClient, ObjectId } = require("mongodb");
 const multer = require("multer");
 const path = require("path");
 const router = express.Router();
-const dns = require("dns");
+// const dns = require("dns");
 
-dns.setServers(['8.8.8.8','8.8.4.4'])
+// dns.setServers(['8.8.8.8','8.8.4.4'])
 
 
 const app = express();
