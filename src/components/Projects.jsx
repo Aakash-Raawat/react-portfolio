@@ -35,7 +35,7 @@ function Projects() {
                         <img
                             src={
                                 project.image
-                                    ? `http://localhost:5000/uploads/${project.image}`
+                                    ? `${BASE_URL}/uploads/${project.image}`
                                     : "https://via.placeholder.com/350x200?text=No+Image"
                             }
                             alt={project.title}
