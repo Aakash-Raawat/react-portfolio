@@ -34,7 +34,7 @@ function Team() {
           <div className="team-card" key={member._id}>
 
             <img
-              src={`http://localhost:5000/uploads/${member.image}`}
+              src={`${BASE_URL}/${member.image}`}
               alt={member.name}
             />
 
