@@ -183,7 +183,6 @@
 }
 
 /* Inputs */
-
 .contact-field input,
 .contact-field textarea {
   width: 100%;
@@ -191,10 +190,12 @@
 
   padding: 13px 15px;
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid #d1d5db;
   border-radius: 10px;
 
-  background: rgba(255, 255, 255, 0.1);
+  background: #ffffff;
+
+  color: #111827;
 
   font-size: 15px;
   font-family: inherit;
@@ -211,11 +212,12 @@
 
 .contact-field input:focus,
 .contact-field textarea:focus {
-  border-color: rgba(255, 255, 255, 0.8);
-  background: rgba(255, 255, 255, 0.15);
+  border-color: #93c5fd;
+  background: #ffffff;
 
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.25);
 }
+
 
 /* Placeholder */
 
