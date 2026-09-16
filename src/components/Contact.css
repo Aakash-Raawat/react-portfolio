@@ -307,9 +307,4 @@
 .contact-field textarea::placeholder {
   color: #6b7280;
   opacity: 1;
-}Improve Contact section styling
-
-  .contact-form button {
-    font-size: 15px;
-  }
 }
