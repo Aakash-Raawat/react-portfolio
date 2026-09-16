@@ -1,4 +1,4 @@
-```jsx
+
 import React from "react";
 import "./Hero.css";
 import profileImage from "../assets/profile.jpeg";
@@ -83,4 +83,3 @@ function Hero() {
 }
 
 export default Hero;
-```
