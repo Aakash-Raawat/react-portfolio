@@ -299,3 +299,105 @@
     transform: none;
   }
 }
+
+
+
+/* About Color Fix */
+
+
+.about {
+  color: #ffffff;
+}
+
+.about h2,
+.about h3,
+.about h4 {
+  color: #ffffff;
+}
+
+.about p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Cards */
+.about-card {
+  background: rgba(20, 20, 35, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* Card Icons */
+.about-card-icon {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Loading */
+.about-loading {
+  color: #ffffff;
+}
+
+.about-loading-icon {
+  color: #ffffff;
+}
+
+.about-loading h3 {
+  color: #ffffff;
+}
+
+.about-loading p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Loading badges */
+.about-tech-icons span {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.about-tech-icons span svg {
+  color: #ffffff;
+}
+
+/* Skills badges */
+.about-skills span {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.about-skills span svg {
+  color: #ffffff;
+}
+
+/* Projects */
+.about-projects div {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.about-projects div svg {
+  color: #ffffff;
+}
+
+/* Divider */
+.about-divider {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Loading spinner */
+.about-spinner {
+  border-color: rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+}
+
+/* Error */
+.about-empty {
+  color: #ffffff;
+}
+
+.about-empty h3,
+.about-empty p {
+  color: #ffffff;
+}
