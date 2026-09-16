@@ -114,3 +114,134 @@
     color:#111827;
 
 }
+/*
+   Team Loading Section
+*/
+
+.team-loading {
+  width: 90%;
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 45px 25px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  animation: loadingFade 0.6s ease-in-out;
+}
+
+.loading-icon {
+  font-size: 55px;
+  color: #2563eb;
+  margin-bottom: 15px;
+  animation: teamFloat 2s ease-in-out infinite;
+}
+
+.team-loading h3 {
+  font-size: 28px;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.team-loading p {
+  color: #4b5563;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.loading-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.loading-features span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 15px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.loading-spinner {
+  width: 35px;
+  height: 35px;
+  margin: 0 auto 12px;
+  border: 4px solid #dbeafe;
+  border-top: 4px solid #2563eb;
+  border-radius: 50%;
+  animation: spinnerRotate 1s linear infinite;
+}
+
+.team-loading small {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+@keyframes spinnerRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes teamFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes loadingFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .team-loading {
+    padding: 35px 18px;
+  }
+
+  .loading-icon {
+    font-size: 45px;
+  }
+
+  .team-loading h3 {
+    font-size: 24px;
+  }
+
+  .team-loading p {
+    font-size: 14px;
+  }
+
+  .loading-features {
+    gap: 8px;
+  }
+
+  .loading-features span {
+    font-size: 13px;
+    padding: 8px 11px;
+  }
+}
