@@ -80,3 +80,154 @@
     font-weight:bold;
 
 }
+
+
+/* Skills Loading UI */
+
+
+.skills-loading {
+  text-align: center;
+  padding: 70px 20px;
+  animation: skillsLoadingFade 0.8s ease;
+}
+
+.skills-loading-icon {
+  font-size: 55px;
+  margin-bottom: 15px;
+  animation: skillsCodeFloat 2s ease-in-out infinite;
+}
+
+.skills-loading h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.skills-loading p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.skills-tech-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 25px auto;
+  max-width: 750px;
+}
+
+.skills-tech-icons span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  animation: skillsBadgeFade 1s ease;
+}
+
+.skills-spinner {
+  width: 42px;
+  height: 42px;
+  border: 4px solid rgba(128, 128, 128, 0.25);
+  border-top: 4px solid currentColor;
+  border-radius: 50%;
+  margin: 25px auto 12px;
+  animation: skillsSpinnerRotate 1s linear infinite;
+}
+
+.skills-loading small {
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.skills-empty {
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 18px;
+}
+
+.skills-empty svg {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Animations */
+
+@keyframes skillsSpinnerRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes skillsCodeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes skillsLoadingFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes skillsBadgeFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .skills-loading {
+    padding: 50px 15px;
+  }
+
+  .skills-loading-icon {
+    font-size: 45px;
+  }
+
+  .skills-loading h3 {
+    font-size: 22px;
+  }
+
+  .skills-loading p {
+    font-size: 14px;
+  }
+
+  .skills-tech-icons {
+    gap: 10px;
+  }
+
+  .skills-tech-icons span {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+}
