@@ -2,13 +2,19 @@ import React from "react";
 import "./Contact.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import {
+  FaEnvelope,
+  FaUser,
+  FaPaperPlane,
+  FaComments,
+} from "react-icons/fa";
+
 const BASE_URL =
   (typeof import.meta !== "undefined" && import.meta.env?.VITE_API_URL) ||
   (typeof process !== "undefined" && process.env?.REACT_APP_API_URL) ||
-  "http://localhost:5000";
+  "https://react-portfolio-24zb.onrender.com";
 
 function Contact() {
-
   // Validation Schema
   const validationSchema = Yup.object({
     name: Yup.string()
@@ -27,7 +33,23 @@ function Contact() {
 
   return (
     <section id="contact" className="contact">
+      {/* Heading */}
       <h2>Contact Me</h2>
+
+      {/* Intro */}
+      <div className="contact-intro">
+        <div className="contact-icon">
+          <FaComments />
+        </div>
+
+        <h3>Let's Connect</h3>
+
+        <p>
+          Have a question, project idea, or just want to say hello?
+          <br />
+          Feel free to send me a message.
+        </p>
+      </div>
 
       <Formik
         initialValues={{
@@ -35,10 +57,8 @@ function Contact() {
           email: "",
           message: "",
         }}
-
         validationSchema={validationSchema}
-
-        onSubmit={async (values, { resetForm }) => {
+        onSubmit={async (values, { resetForm, setSubmitting }) => {
           try {
             const response = await fetch(`${BASE_URL}/api/contact`, {
               method: "POST",
@@ -56,63 +76,85 @@ function Contact() {
           } catch (error) {
             console.log(error);
             alert("Something went wrong!");
+          } finally {
+            setSubmitting(false);
           }
         }}
-
-      // onSubmit={(values, { resetForm }) => {
-      //   alert("Message Sent Successfully!");
-
-      //   console.log(values);
-
-      //   resetForm();
-      // }}
       >
-        <Form className="contact-form">
+        {({ isSubmitting }) => (
+          <Form className="contact-form">
+            {/* Name */}
+            <div className="contact-field">
+              <label htmlFor="name">
+                <FaUser /> Your Name
+              </label>
 
-          <Field
-            type="text"
-            name="name"
-            placeholder="Your Name"
-          />
-          <ErrorMessage
-            name="name"
-            component="p"
-            className="error"
-          />
+              <Field
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+              />
 
-          <Field
-            type="email"
-            name="email"
-            placeholder="Your Email"
-          />
-          <ErrorMessage
-            name="email"
-            component="p"
-            className="error"
-          />
+              <ErrorMessage
+                name="name"
+                component="p"
+                className="error"
+              />
+            </div>
 
-          <Field
-            as="textarea"
-            name="message"
-            rows="5"
-            placeholder="Your Message"
-          />
-          <ErrorMessage
-            name="message"
-            component="p"
-            className="error"
-          />
+            {/* Email */}
+            <div className="contact-field">
+              <label htmlFor="email">
+                <FaEnvelope /> Your Email
+              </label>
 
-          <button type="submit">
-            Send Message
-          </button>
+              <Field
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+              />
 
-        </Form>
+              <ErrorMessage
+                name="email"
+                component="p"
+                className="error"
+              />
+            </div>
+
+            {/* Message */}
+            <div className="contact-field">
+              <label htmlFor="message">
+                <FaComments /> Your Message
+              </label>
+
+              <Field
+                as="textarea"
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Write your message..."
+              />
+
+              <ErrorMessage
+                name="message"
+                component="p"
+                className="error"
+              />
+            </div>
+
+            {/* Submit */}
+            <button type="submit" disabled={isSubmitting}>
+              <FaPaperPlane />
+
+              {isSubmitting ? " Sending..." : " Send Message"}
+            </button>
+          </Form>
+        )}
       </Formik>
-
     </section>
   );
 }
 
 export default Contact;
-
