@@ -264,3 +264,7 @@
 .skills-loading small {
   color: #ffffff;
 }
+
+.skills > h2 {
+  color: #000;
+}
