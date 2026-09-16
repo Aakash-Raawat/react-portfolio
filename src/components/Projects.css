@@ -115,3 +115,153 @@
     text-decoration:none;
     text-align:center;
 }
+/*
+   Projects Loading Section
+ */
+
+.projects-loading {
+  width: 90%;
+  max-width: 700px;
+  margin: 30px auto 50px;
+  padding: 50px 25px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  animation: projectsLoadingFade 0.6s ease-in-out;
+}
+
+.projects-loading-icon {
+  font-size: 55px;
+  color: #2563eb;
+  margin-bottom: 15px;
+  animation: projectRocket 2s ease-in-out infinite;
+}
+
+.projects-loading h3 {
+  font-size: 28px;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.projects-loading p {
+  color: #4b5563;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.project-tech-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.project-tech-icons span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 15px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.projects-spinner {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 12px;
+
+  border: 4px solid #dbeafe;
+  border-top: 4px solid #2563eb;
+
+  border-radius: 50%;
+
+  animation: projectSpinner 1s linear infinite;
+}
+
+.projects-loading small {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.projects-empty {
+  text-align: center;
+  color: #6b7280;
+  margin: 40px 0;
+}
+
+
+/* 
+   Animations
+ */
+
+@keyframes projectSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes projectRocket {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes projectsLoadingFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* 
+   Mobile Responsive
+ */
+
+@media (max-width: 600px) {
+  .projects-loading {
+    padding: 35px 18px;
+  }
+
+  .projects-loading-icon {
+    font-size: 45px;
+  }
+
+  .projects-loading h3 {
+    font-size: 24px;
+  }
+
+  .projects-loading p {
+    font-size: 14px;
+  }
+
+  .project-tech-icons {
+    gap: 8px;
+  }
+
+  .project-tech-icons span {
+    font-size: 13px;
+    padding: 8px 11px;
+  }
+}
