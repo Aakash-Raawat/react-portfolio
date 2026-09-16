@@ -1,3 +1,4 @@
+```jsx
 import React from "react";
 import "./Hero.css";
 import profileImage from "../assets/profile.jpeg";
@@ -24,48 +25,62 @@ function Hero() {
           using React, Node.js, Express and MongoDB.
         </p>
 
-
         <div className="hero-buttons">
 
-          <button>
+          {/* Resume Button */}
+          <a
+            href="/Aakash-Rawat-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="resume-btn"
+          >
             Download Resume
-          </button>
+          </a>
 
-          <button className="contact-btn"
-           onClick={()=> navigate("/Contact")}>
+          {/* Contact Button */}
+          <button
+            className="contact-btn"
+            onClick={() => navigate("/Contact")}
+          >
             Contact Me
           </button>
 
         </div>
 
-
         <div className="social-icons">
 
-          <a href="https://github.com/Aakash-Raawat">
+          <a
+            href="https://github.com/Aakash-Raawat"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             GitHub
           </a>
-          <a href="https://www.linkedin.com/in/aakash-raawat-a00280417" >
+
+          <a
+            href="https://www.linkedin.com/in/aakash-raawat-a00280417"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LinkedIn
           </a>
 
         </div>
 
-
       </div>
-
 
       <div className="hero-image">
 
-        <img 
+        <img
           src={profileImage}
           alt="profile"
         />
 
       </div>
 
-
     </section>
   );
 }
 
 export default Hero;
+```
